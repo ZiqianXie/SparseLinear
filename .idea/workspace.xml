@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b917484b-02a7-4e51-af50-57ace4eed854" name="Default Changelist" comment="" />
+    <list default="true" id="b917484b-02a7-4e51-af50-57ace4eed854" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +17,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Ylo6rx7RKdnJNlUtpxSFdX9Wq9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -74,18 +83,41 @@
       <workItem from="1583863080206" duration="7084000" />
       <workItem from="1583942856694" duration="6416000" />
       <workItem from="1583950392431" duration="1964000" />
-      <workItem from="1584554292474" duration="279000" />
+      <workItem from="1584554292474" duration="11443000" />
     </task>
+    <task id="LOCAL-00001" summary="add dataloader">
+      <created>1584580653410</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584580653410</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add dataloader">
+      <created>1584580697524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584580697524</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add dataloader" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dataloader" />
   </component>
   <component name="WindowStateProjectService">
     <state x="422" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583864239777">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
     <state x="422" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1052@0.27.1920.1052" timestamp="1583864239777" />
+    <state x="525" y="57" width="865" height="920" key="CommitChangelistDialog2" timestamp="1584580697474">
+      <screen x="0" y="27" width="1920" height="1052" />
+    </state>
+    <state x="525" y="57" width="865" height="920" key="CommitChangelistDialog2/0.27.1920.1052@0.27.1920.1052" timestamp="1584580697474" />
     <state width="1354" height="258" key="GridCell.Tab.0.bottom" timestamp="1583947982768">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
@@ -106,10 +138,14 @@
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
     <state x="452" y="172" width="1016" height="738" key="SettingsEditor/0.27.1920.1052@0.27.1920.1052" timestamp="1583526498439" />
-    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup" timestamp="1583526998561">
+    <state x="558" y="249" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1584580707802">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup/0.27.1920.1052@0.27.1920.1052" timestamp="1583526998561" />
+    <state x="558" y="249" width="800" height="536" key="Vcs.Push.Dialog.v2/0.27.1920.1052@0.27.1920.1052" timestamp="1584580707802" />
+    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup" timestamp="1584580411744">
+      <screen x="0" y="27" width="1920" height="1052" />
+    </state>
+    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup/0.27.1920.1052@0.27.1920.1052" timestamp="1584580411744" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sparse_linear$Sparse_linear.coverage" NAME="Sparse_linear Coverage Results" MODIFIED="1583947982749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

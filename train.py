@@ -48,6 +48,7 @@ for i in range(EPOCH):
     for cpg, gene_exp in trainLoader:
         cpg = torch.tensor(cpg).to(device)
         gene_exp = torch.tensor(gene_exp).to(device)
+        optimizer.zero_grad()
         Loss(model(cpg).squeeze(2), gene_exp).backward()
         optimizer.step()
     for cpg, gene_exp in testLoader:
