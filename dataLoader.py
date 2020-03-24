@@ -20,7 +20,7 @@ def precompute_tell(files, save_path):
 class csvDataset(Dataset):
     def __init__(self, csv_files, pkl_pos=None):
         if pkl_pos is None:
-            self.pos = precompute_tell(csv_files, csv_files[0]+".pkl")
+            self.pos = precompute_tell(csv_files, "saved_pos.pkl")
         else:
             with open(pkl_pos, 'rb') as f:
                 self.pos = pkl.load(f)

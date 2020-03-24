@@ -40,26 +40,27 @@ if len(sys.argv) > 6:
 else:
     pickled_pos = None
 
-model = SparseLinear2(17113, 1, get_indices(gene_file, cpg_file, meta_file)).to(device)
-optimizer = SGD(lr=1e-3, momentum=0.9)
+indices = get_indices(cpg_file, gene_file, meta_file)
+model = SparseLinear2(17113, 1, indices).to(device)
+optimizer = SGD(model.parameters(), lr=1e-3, momentum=0.9)
 dataset = csvDataset([cpg_file, gene_file], pickled_pos)
 split = int(len(dataset) * 0.8)
 train_idx = list(range(split))
 test_idx = list(range(split, len(dataset)))
-trainLoader = DataLoader(dataset, batch_size=BATCHSIZE, sampler=SubsetRandomSampler(train_idx), shuffle=True)
+trainLoader = DataLoader(dataset, batch_size=BATCHSIZE, sampler=SubsetRandomSampler(train_idx))
 testLoader = DataLoader(dataset, batch_size=BATCHSIZE, sampler=SubsetRandomSampler(test_idx))
-Loss = MSELoss()
+Loss = MSELoss().to(device)
 for i in range(EPOCH):
     for cpg, gene_exp in trainLoader:
-        cpg = torch.tensor(cpg).to(device)
-        gene_exp = torch.tensor(gene_exp).to(device)
+        cpg = torch.tensor(cpg).float().to(device)
+        gene_exp = torch.tensor(gene_exp).float().to(device)
         optimizer.zero_grad()
         Loss(model(cpg).squeeze(2), gene_exp).backward()
         optimizer.step()
     for cpg, gene_exp in testLoader:
         running_loss = 0
-        with torch.no_grad:
-            cpg = torch.tensor(cpg).to(device)
-            gene_exp = torch.tensor(gene_exp).to(device)
+        with torch.no_grad():
+            cpg = torch.tensor(cpg).float().to(device)
+            gene_exp = torch.tensor(gene_exp).float().to(device)
             running_loss += Loss(model(cpg).squeeze(2), gene_exp)
-        print("epoch {} testing r2: {}".format(i+1, running_loss/len(test_idx)))
+    print("epoch {} testing r2: {}".format(i+1, running_loss/len(test_idx)))
