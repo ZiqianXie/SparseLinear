@@ -18,9 +18,14 @@ def get_indices(cpg_file, gene_exp_file, meta_file):
         for line in meta:
            gene, cpgs = line.strip().split(',')
            cpgs = cpgs.split(':')
-           gene_idx = gene_exp_dict[gene]
+           gene_idx = gene_exp_dict.get(gene, None)
+           if gene_idx is None:
+               continue
            for cpg in cpgs:
-               indices.append([gene_idx, cpg_site_dict[cpg]])
+               cpg_idx = cpg_site_dict.get(cpg, None)
+               if cpg_idx is None:
+                   continue
+               indices.append([gene_idx, cpg_idx])
     return indices
 
 
