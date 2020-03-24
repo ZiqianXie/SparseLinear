@@ -10,9 +10,9 @@ from torch.optim import SGD
 def get_indices(cpg_file, gene_exp_file, meta_file):
     with open(cpg_file, 'r') as f, open(gene_exp_file, 'r') as g, open(meta_file, 'r') as meta:
         cpg_sites = list(map(lambda x: x[1:-1], f.readline().strip().split(',')[1:]))
-        cpg_site_dict = dict(zip(cpg_sites, range(cpg_sites)))
+        cpg_site_dict = dict(zip(cpg_sites, range(len(cpg_sites))))
         gene_exp = list(map(lambda x: x[1:-1], g.readline().strip().split(',')[1:]))
-        gene_exp_dict = dict(zip(gene_exp, range(gene_exp)))
+        gene_exp_dict = dict(zip(gene_exp, range(len(gene_exp))))
         meta.readline()
         indices = []
         for line in meta:
