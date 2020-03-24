@@ -25,11 +25,11 @@ class SparseLinear2(torch.nn.Module):
         super().__init__()
         self.ind = torch.tensor(sorted(indices))
         nnz_counter = Counter(map(lambda x: x[0], indices))
-        mean_nnz = np.asarray(list(nnz_counter.values())).mean()
+        median_nnz = np.median(np.asarray(list(nnz_counter.values())))
         self.num_gene = num_gene
         self.dim_x = len(indices)
         self.dim_y = dim_rep
-        self.w = torch.nn.Parameter(torch.randn(self.dim_x, self.dim_y)/np.sqrt(mean_nnz))
+        self.w = torch.nn.Parameter(torch.randn(self.dim_x, self.dim_y)/np.sqrt(median_nnz))
 
     def forward(self, x):
         # x is of shape (batch, num_cpg)
