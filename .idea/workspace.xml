@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b917484b-02a7-4e51-af50-57ace4eed854" name="Default Changelist" comment="">
+    <list default="true" id="b917484b-02a7-4e51-af50-57ace4eed854" name="Default Changelist" comment="add graph convolutional layer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphConv.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphConv.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,8 @@
       <workItem from="1583863080206" duration="7084000" />
       <workItem from="1583942856694" duration="6416000" />
       <workItem from="1583950392431" duration="1964000" />
-      <workItem from="1584554292474" duration="11443000" />
+      <workItem from="1584554292474" duration="11652000" />
+      <workItem from="1584995211257" duration="6321000" />
     </task>
     <task id="LOCAL-00001" summary="add dataloader">
       <created>1584580653410</created>
@@ -99,55 +100,97 @@
       <option name="project" value="LOCAL" />
       <updated>1584580697524</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix not zero_grad">
+      <created>1584580967544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584580967544</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix typo">
+      <created>1584996151185</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584996151185</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix not zero_grad">
+      <created>1585011111200</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585011111200</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add dataloader" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dataloader" />
+    <MESSAGE value="fix typo" />
+    <MESSAGE value="add graph convolutional layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add graph convolutional layer" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="558" y="180" width="800" height="685" key="#Notifications" timestamp="1585011202143">
+      <screen x="0" y="27" width="1920" height="1052" />
+    </state>
+    <state x="558" y="180" width="800" height="685" key="#Notifications/0.27.1920.1052@0.27.1920.1052" timestamp="1585011202143" />
     <state x="422" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583864239777">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
     <state x="422" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1052@0.27.1920.1052" timestamp="1583864239777" />
-    <state x="525" y="57" width="865" height="920" key="CommitChangelistDialog2" timestamp="1584580697474">
+    <state x="525" y="25" width="865" height="920" key="CommitChangelistDialog2" timestamp="1585011111128">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state x="525" y="57" width="865" height="920" key="CommitChangelistDialog2/0.27.1920.1052@0.27.1920.1052" timestamp="1584580697474" />
-    <state width="1354" height="258" key="GridCell.Tab.0.bottom" timestamp="1583947982768">
+    <state x="525" y="25" width="865" height="920" key="CommitChangelistDialog2/0.27.1920.1052@0.27.1920.1052" timestamp="1585011111128" />
+    <state x="799" y="428" key="GitRewordDialog" timestamp="1585011181420">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.bottom/0.27.1920.1052@0.27.1920.1052" timestamp="1583947982768" />
-    <state width="1354" height="258" key="GridCell.Tab.0.center" timestamp="1583947982766">
+    <state x="799" y="428" key="GitRewordDialog/0.27.1920.1052@0.27.1920.1052" timestamp="1585011181420" />
+    <state width="1354" height="124" key="GridCell.Tab.0.bottom" timestamp="1585009779706">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.center/0.27.1920.1052@0.27.1920.1052" timestamp="1583947982766" />
-    <state width="1354" height="258" key="GridCell.Tab.0.left" timestamp="1583947982765">
+    <state width="1354" height="124" key="GridCell.Tab.0.bottom/0.27.1920.1052@0.27.1920.1052" timestamp="1585009779706" />
+    <state width="1354" height="124" key="GridCell.Tab.0.center" timestamp="1585009779706">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.left/0.27.1920.1052@0.27.1920.1052" timestamp="1583947982765" />
-    <state width="1354" height="258" key="GridCell.Tab.0.right" timestamp="1583947982767">
+    <state width="1354" height="124" key="GridCell.Tab.0.center/0.27.1920.1052@0.27.1920.1052" timestamp="1585009779706" />
+    <state width="1354" height="124" key="GridCell.Tab.0.left" timestamp="1585009779705">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state width="1354" height="258" key="GridCell.Tab.0.right/0.27.1920.1052@0.27.1920.1052" timestamp="1583947982767" />
+    <state width="1354" height="124" key="GridCell.Tab.0.left/0.27.1920.1052@0.27.1920.1052" timestamp="1585009779705" />
+    <state width="1354" height="124" key="GridCell.Tab.0.right" timestamp="1585009779706">
+      <screen x="0" y="27" width="1920" height="1052" />
+    </state>
+    <state width="1354" height="124" key="GridCell.Tab.0.right/0.27.1920.1052@0.27.1920.1052" timestamp="1585009779706" />
     <state x="452" y="172" width="1016" height="738" key="SettingsEditor" timestamp="1583526498439">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
     <state x="452" y="172" width="1016" height="738" key="SettingsEditor/0.27.1920.1052@0.27.1920.1052" timestamp="1583526498439" />
-    <state x="558" y="249" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1584580707802">
+    <state x="558" y="217" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1585011191125">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state x="558" y="249" width="800" height="536" key="Vcs.Push.Dialog.v2/0.27.1920.1052@0.27.1920.1052" timestamp="1584580707802" />
-    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup" timestamp="1584580411744">
+    <state x="558" y="217" width="800" height="536" key="Vcs.Push.Dialog.v2/0.27.1920.1052@0.27.1920.1052" timestamp="1585011191125" />
+    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup" timestamp="1585008434930">
       <screen x="0" y="27" width="1920" height="1052" />
     </state>
-    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup/0.27.1920.1052@0.27.1920.1052" timestamp="1584580411744" />
+    <state x="623" y="256" width="672" height="678" key="search.everywhere.popup/0.27.1920.1052@0.27.1920.1052" timestamp="1585008434930" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sparse_linear$Sparse_linear.coverage" NAME="Sparse_linear Coverage Results" MODIFIED="1583947982749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sparse_linear$Sparse_linear.coverage" NAME="Sparse_linear Coverage Results" MODIFIED="1585009773808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

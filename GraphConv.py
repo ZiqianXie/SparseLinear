@@ -8,7 +8,7 @@ class GraphConv(torch.nn.Module):
         self.nl_ind = nl_ind  # normalized laplacian indicies
         self.nl_value = nl_value  # normalized laplacian value
         self.out_dim = outdim
-        self.W = torch.nn.Parameter(torch.randn(indim, outdim)/np.sqrt(2*indim))
+        self.W = torch.nn.Parameter(torch.randn(indim, outdim)/np.sqrt(2*indim), requires_grad=True)
         self.nonlinearity = nonlinearity(True)
 
     def forward(self, x):
